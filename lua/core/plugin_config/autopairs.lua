@@ -1,2 +1,12 @@
-local autopairs = require("nvim-autopairs")
-autopairs.setup{}
+require('nvim-autopairs').setup({
+  pairs = {
+    { "'", "'" },
+    { "\"", "\"" },
+    { "`", "`" },
+    { "(", ")" },
+    { "[", "]" },
+    { "{", "}" },
+    -- Remove the rule for the '*' character:
+    -- { "*", "*" },
+  },
+})
