@@ -37,20 +37,20 @@ cmp.setup({
     { name = "nvim_lsp" },
     { name = "buffer" },
     { name = "path" },
-    { name = "cmdline" },
+--    { name = "cmdline" },
     { name = "luasnip" },
   },
 })
 
-cmp.setup.cmdline(':', {
-  sources = cmp.config.sources({
-    { name = 'path' },
-  }, {
-    { name = 'cmdline' },
-  })
-})
+--cmp.setup.cmdline(':', {
+--  sources = cmp.config.sources({
+--    { name = 'path' },
+--  }, {
+--    { name = 'cmdline' },
+--  })
+--})
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
-require('lspconfig').pyright.setup {
+require('lspconfig').pylsp.setup({
   capabilities = capabilities,
-}
+})
