@@ -18,14 +18,13 @@ return require('packer').startup(function(use)
   use 'nvim-tree/nvim-web-devicons'
   use 'nvim-treesitter/nvim-treesitter'
   use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.1',
-    requires = { {'nvim-lua/plenary.nvim'} }
-  }
-  use {
     'akinsho/bufferline.nvim', tag = "*",
     requires = 'nvim-tree/nvim-web-devicons'
   }
-  use 'github/copilot.vim'
+  use {
+    'nvim-telescope/telescope.nvim', tag = '0.1.4',
+    requires = { {'nvim-lua/plenary.nvim'} }
+  }
 
   use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-nvim-lsp'
@@ -41,6 +40,11 @@ return require('packer').startup(function(use)
       "williamboman/mason.nvim",
       "williamboman/mason-lspconfig.nvim",
       "neovim/nvim-lspconfig",
+  }
+
+  use {
+      "frankroeder/parrot.nvim",
+      requires = { 'ibhagwan/fzf-lua', 'nvim-lua/plenary.nvim'},
   }
 
   -- Automatically set up your configuration after cloning packer.nvim
